@@ -1,5 +1,10 @@
+require "egoist"
+require "rails"
+
 module Egoist
-  class Ego
+  class Ego < Rails::Engine
+    engine_name :egoist
+    
     def self.portray(ego)
       if ego.downcase == "broccoli"
         "Gross!"

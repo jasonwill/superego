@@ -7,17 +7,8 @@ module Egoist
     isolate_namespace Egoist
     
     initializer 'Egoist.controller' do |app|  
-          ActiveSupport.on_load(:action_controller) do  
-             include Egoist::ApplicationControllerDecorator  
-          end
-        end
-    
-    
-    def self.portray(ego)
-      if ego.downcase == "pnca"
-        "Rocks!"
-      else
-        "Lame!"
+      ActiveSupport.on_load(:action_controller) do  
+        include Egoist::ApplicationControllerDecorator  
       end
     end
     

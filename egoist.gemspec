@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.authors     = ["Jason Williams"]
   s.email       = ["jwilliams@pnca.edu"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
+  s.summary     = "An authentication client that provides a persistent, shared session with a centralized authentication system."
+  s.description = "An authentication client that provides a persistent, shared session with the Superego centralized authentication system. This engine utilizes a custom OmniAuth strategy to authenticate, effectively removing any authentication concerns from the host application."
+  
   s.rubyforge_project = "egoist"
 
   s.files         = `git ls-files`.split("\n")

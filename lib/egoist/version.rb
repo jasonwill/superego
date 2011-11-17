@@ -1,3 +1,3 @@
 module Egoist
-  VERSION = "0.0.24"
+  VERSION = "0.0.39"
 end

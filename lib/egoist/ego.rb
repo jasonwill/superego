@@ -1,16 +1,25 @@
-require "egoist"
+#require "egoist"
 require "rails"
 
 module Egoist
+  
   class Ego < Rails::Engine
-    engine_name :egoist
+    isolate_namespace Egoist
+    
+    initializer 'Egoist.controller' do |app|  
+          ActiveSupport.on_load(:action_controller) do  
+             include Egoist::ApplicationControllerDecorator  
+          end
+        end
+    
     
     def self.portray(ego)
-      if ego.downcase == "broccoli"
-        "Gross!"
+      if ego.downcase == "pnca"
+        "Rocks!"
       else
-        "Delicious!"
+        "Lame!"
       end
     end
+    
   end
 end

@@ -1,11 +1,11 @@
 require 'egoist/ego'
 
 describe Egoist::Ego do
-  it "broccoli is gross" do
-    Egoist::Ego.portray("Broccoli").should eql("Gross!")
+  it "pnca rocks" do
+    Egoist::Ego.portray("PNCA").should eql("Rocks!")
   end
 
-  it "anything else is delicious" do
-    Egoist::Ego.portray("Not Broccoli").should eql("Delicious!")
+  it "anything else is lame" do
+    Egoist::Ego.portray("Not PNCA").should eql("Lame!")
   end
 end

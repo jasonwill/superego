@@ -1,12 +1,10 @@
 module Egoist
-  module SessionsControllerDecorator
-    # omniauth callback method 
-    #def create
-    #  omniauth = request.env['omniauth.auth']
-
-    #  user = User.find_by_uid(omniauth['uid'])
-    #  if not user
-        # New user registration
+  module SessionsController
+    def create
+    
+    user = User.find_by_uid(omniauth['uid'])
+    if !ego
+    # Instantiate a new user record
     #    user = User.create!(:uid => omniauth['uid'], 
     #                        :first_name => omniauth['extra']['first_name'],
     #                        :last_name => omniauth['extra']['last_name'])

@@ -1,17 +1,16 @@
 module Egoist
   module SessionsController
-    def create
     
-    user = User.find_by_uid(omniauth['uid'])
-    if !ego
-    # Instantiate a new user record
-    #    user = User.create!(:uid => omniauth['uid'], 
-    #                        :first_name => omniauth['extra']['first_name'],
-    #                        :last_name => omniauth['extra']['last_name'])
-    #  end
+    def create
+      user = User.find_by_uid(params[:uid])
+      if !user
+      # Instantiate a new user record
+        user = User.create!(:uid => ['uid'], 
+                          :first_name => omniauth['extra']['first_name'],
+                          :last_name => omniauth['extra']['last_name'])
+      end
 
-      # Currently storing all the info
-    #  session[:user_id] = omniauth
+      session[:user_id] = omniauth
 
     #  flash[:notice] = "Successfully logged in"
     #  redirect_to root_path

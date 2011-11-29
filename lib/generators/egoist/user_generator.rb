@@ -2,7 +2,7 @@ require 'rails/generators'
 require 'rails/generators/migration'     
 
 module Egoist
-  class EgoGenerator < Rails::Generators::Base
+  class UserGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
     
     def self.source_root

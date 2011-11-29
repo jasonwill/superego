@@ -1,11 +1,12 @@
 module Egoist
   module ApplicationControllerDecorator
   
-  def login_required
+  def authenticated?
      if !current_user
+       #session[:return_to] = 'abc'
        respond_to do |format|
          format.html  { 
-           redirect_to 'http://superego.dev'
+           redirect_to 'http://superego.local.dev'
          }
          format.json {
            render :json => { 'error' => 'Access Denied' }.to_json
